@@ -1,3 +1,184 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
+
+.heading-one,
+.markdown h1 {
+	@apply font-semibold  font-avenir  text-black;
+}
+
+.heading-two,
+.markdown h2 {
+	@apply text-[26px] lg:text-6xl font-semibold  text-black;
+}
+
+.heading-three,
+.markdown h3 {
+	@apply text-xl lg:text-[10px] text-black;
+}
+
+.heading-four,
+.markdown h4 {
+	@apply text-base text-black;
+}
+
+.heading-five,
+.markdown h5 {
+	@apply text-base  text-black font-medium;
+}
+
+.heading-six,
+.markdown h6 {
+	@apply text-xs  text-black font-medium;
+}
+
+.text-lead {
+	@apply text-sm text-black;
+}
+
+.text-regular,
+.markdown p {
+	@apply text-[18px] font-avenir font-medium text-black;
+}
+
+.text-small,
+.markdown small {
+	@apply text-base font-medium;
+}
+.custom,
+.markdown small {
+	@apply text-base;
+}
+
+#nprogress {
+	pointer-events: none;
+}
+
+#nprogress .bar {
+	background: #edba04;
+	height: 3px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1031;
+}
+
+#nprogress .peg {
+	box-shadow: 0 0 10px #edba04, 0 0 5px #edba04;
+	display: block;
+	height: 100%;
+	opacity: 1;
+	position: absolute;
+	right: 0px;
+	transform: rotate(3deg) translate(0px, -4px);
+	width: 100px;
+}
+
+#nprogress .spinner {
+	display: block;
+	position: fixed;
+	right: 15px;
+	top: 15px;
+	z-index: 1031;
+}
+
+#nprogress .spinner-icon {
+	animation: nprogress-spinner 400ms linear infinite;
+	border-left-color: #edba04;
+	border-radius: 50%;
+	border-top-color: #edba04;
+	border: solid 2px transparent;
+	box-sizing: border-box;
+	height: 18px;
+	width: 18px;
+}
+
+.nprogress-custom-parent {
+	overflow: hidden;
+	position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+	position: absolute;
+}
+
+@keyframes nprogress-spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* * DOTS ANIMATION */
+
+.dots-cont {
+	position: absolute;
+	transition: all ease-in-out;
+}
+
+.dot {
+	width: 7px;
+	height: 7px;
+	background: #edba04;
+	display: inline-block;
+	border-radius: 50%;
+	right: 0px;
+	bottom: 0px;
+	margin: 0px 2.5px;
+	position: relative;
+	transition: all ease-in-out;
+}
+
+.nav-item:hover .dots-cont > .dot {
+	position: relative;
+	bottom: 0px;
+	animation-name: jump;
+	animation-duration: 0.3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease;
+}
+
+.dots-cont .dot-1 {
+	-webkit-animation-delay: 100ms;
+	animation-delay: 100ms;
+}
+
+.dots-cont .dot-2 {
+	-webkit-animation-delay: 200ms;
+	animation-delay: 200ms;
+}
+
+.dots-cont .dot-3 {
+	-webkit-animation-delay: 300ms;
+	animation-delay: 300ms;
+}
+@keyframes jump {
+	from {
+		bottom: 0px;
+	}
+	to {
+		bottom: 10px;
+	}
+}
+@-webkit-keyframes jump {
+	from {
+		bottom: 0px;
+	}
+	to {
+		bottom: 10px;
+	}
+}
+
+/* * DOTS ANIMATION */
+
+/*  * HEADROOM PINNED */
+.pinned .headroom {
+	@apply bg-white;
+}
+
+/*  * HEADROOM PINNED */

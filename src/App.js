@@ -1,4 +1,4 @@
-import { Button, Text } from "./components";
+import { Button, Text, Heading } from "./components";
 
 function App() {
   return (
@@ -33,7 +33,16 @@ function App() {
         </div>
         {/* Text components */}
         <div className="h-[200px] w-full bg-slate-200 p-4 rounded-md">
-          <Text variant="text-regular">"Text"</Text>
+          <Text
+            variant="text-regular"
+            element="p"
+            className="text-black font-medium"
+          >
+            {"Text"}
+          </Text>
+        </div>
+        <div className="h-[200px] w-full bg-slate-200 p-4 rounded-md">
+          <Heading element="h1" variant="heading-one" label="heading 1" />
         </div>
       </div>
     </div>

@@ -24,6 +24,9 @@ module.exports = {
           "red-600": "#6E0E10",
         },
       },
+      fontFamily: {
+        avenir: ["Avenir", "sans-serif"],
+      },
     },
   },
   plugins: [],
