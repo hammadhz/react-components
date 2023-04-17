@@ -27,6 +27,10 @@ module.exports = {
       fontFamily: {
         avenir: ["Avenir", "sans-serif"],
       },
+      backgroundImage: {
+        image: "url('/src/assets/images/center.png')",
+        profile: "url('/src/assets/images/profile.png')",
+      },
     },
   },
   plugins: [],
